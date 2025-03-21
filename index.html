@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Inquinamento</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>no password no diritto</h1>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Inserisci Username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Inserisci Password" required>
+
+            <button type="submit">Accedi</button>
+            <p id="error-message" style="color: red; display: none;">Credenziali errate, riprova.</p>
+        </form>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

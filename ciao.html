@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquinamento e Sostenibilità</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #3498db, #2ecc71, #f39c12, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            list-style-type: none;
+            background-color: rgba(52, 152, 219, 0.9);
+            margin: 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ecf0f1;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(236, 240, 241, 0.8);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .intro h2 {
+            font-size: 3rem;
+            color: #2980b9;
+            margin: 0 0 20px;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin: 0 0 30px;
+        }
+
+        .pollution-types {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .pollution-type {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pollution-type:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .pollution-type h3 {
+            font-size: 1.8rem;
+            color: #2980b9;
+        }
+
+        .pollution-type p {
+            font-size: 1rem;
+            color: #34495e;
+            margin: 10px 0;
+        }
+
+        .pollution-type a {
+            text-decoration: none;
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pollution-type a:hover {
+            background-color: #3498db;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        .agenda-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .agenda-section h3 {
+            text-align: center;
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .agenda-section p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        .agenda-button {
+            display: block;
+            width: 200px;
+            padding: 12px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px auto;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .agenda-button:hover {
+            background-color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .pollution-types {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pollution-type {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .agenda-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inquinamento e Sostenibilità</h1>
+    </header>
+
+    <section class="intro" id="home">
+        <p>Progetto sviluppato da P4ciuf & Charun02, creato per sensibilizzare sull'inquinamento. Buona visione e speriamo che il progetto vi piaccia!</p>
+    </section>
+
+    <section class="pollution-types">
+        <div class="pollution-type" id="air">
+            <h3>Inquinamento Aria</h3>
+            <p>L’inquinamento dell’aria è la presenza di sostanze nocive nell’atmosfera, causata principalmente da industrie, trasporti, agricoltura e deforestazione. Le fabbriche e le centrali elettriche rilasciano gas come anidride solforosa (SO₂) e ossidi di azoto (NOₓ), mentre i veicoli emettono anidride carbonica (CO₂) e particolato fine, contribuendo all’effetto serra e ai cambiamenti climatici. Anche gli allevamenti intensivi producono grandi quantità di metano (CH₄), un gas serra molto potente.
+
+                Le conseguenze dell’inquinamento atmosferico sono gravi. Per la salute umana, l’esposizione a sostanze tossiche può causare malattie respiratorie come asma, bronchite cronica e tumori polmonari. A livello ambientale, l’inquinamento dell’aria contribuisce alle piogge acide, che danneggiano suoli, foreste e corsi d’acqua. Inoltre, i gas serra intensificano il riscaldamento globale, causando scioglimento dei ghiacciai, eventi climatici estremi e perdita di biodiversità.
+                
+                Per ridurre l’inquinamento atmosferico, è necessario adottare misure efficaci come il passaggio alle energie rinnovabili, la riduzione delle emissioni industriali, l’uso di trasporti sostenibili e il potenziamento delle aree verdi nelle città. Anche l’applicazione di normative più rigide e il monitoraggio della qualità dell’aria possono contribuire a limitare il problema.
+                
+                Proteggere la qualità dell’aria è fondamentale per la salute del pianeta e delle persone. Agire con scelte più sostenibili e promuovere tecnologie meno inquinanti è essenziale per ridurre gli impatti negativi e garantire un futuro più sano.</p>
+        </div>
+        <div class="pollution-type" id="water">
+            <h3>Inquinamento Acqua</h3>
+            <p>L’inquinamento dell’acqua è la contaminazione di mari, fiumi, laghi e falde acquifere da sostanze nocive, con gravi conseguenze per la salute umana e gli ecosistemi. Le principali cause sono gli scarichi industriali, l’agricoltura intensiva, i rifiuti urbani e la deforestazione. Le industrie rilasciano sostanze tossiche come metalli pesanti e prodotti chimici, mentre i pesticidi e i fertilizzanti usati in agricoltura finiscono nei corsi d’acqua, causando eutrofizzazione. Anche le acque reflue non trattate e i rifiuti plastici contribuiscono all’inquinamento, danneggiando la fauna marina e introducendo microplastiche nella catena alimentare.
+
+                Le conseguenze sono gravi: per l’uomo, l’acqua inquinata può causare malattie come colera, epatite e disturbi neurologici dovuti alla presenza di sostanze tossiche. Gli ecosistemi acquatici soffrono la riduzione dell’ossigeno nell’acqua, portando alla morte di pesci e altre specie. L’acidificazione degli oceani, dovuta ai cambiamenti climatici, altera gli equilibri marini.
+                
+                Per contrastare il problema, è fondamentale migliorare la gestione dei rifiuti, depurare le acque reflue, ridurre l’uso di pesticidi e fertilizzanti chimici e promuovere materiali biodegradabili. Anche l’adozione di leggi più severe contro gli sversamenti industriali e l’inquinamento marino può aiutare a preservare le risorse idriche.
+                
+                Proteggere l’acqua è essenziale per la salute dell’uomo e dell’ambiente. L’impegno collettivo nella riduzione dell’inquinamento e nella tutela degli ecosistemi acquatici è fondamentale per garantire acqua pulita alle future generazioni.</p>
+        </div>
+        <div class="pollution-type" id="soil">
+            <h3>Inquinamento Suolo</h3>
+            <p>L’inquinamento del suolo è causato dall’introduzione di sostanze tossiche dovute ad attività umane come agricoltura, industria, gestione dei rifiuti e urbanizzazione. Tra le principali fonti di contaminazione ci sono pesticidi e fertilizzanti chimici, sversamenti industriali, rifiuti solidi, idrocarburi e deforestazione.
+
+                Le conseguenze sono gravi sia per l’uomo che per l’ambiente. La salute umana è a rischio a causa dell’esposizione a sostanze tossiche che possono causare problemi respiratori, malattie della pelle e tumori. Gli ecosistemi subiscono danni con la perdita di biodiversità e la contaminazione delle acque sotterranee. Inoltre, il suolo inquinato perde fertilità, riducendo la capacità di produrre cibo sano e mettendo a rischio la sicurezza alimentare.
+                
+                Per contrastare l’inquinamento del suolo, è necessario adottare soluzioni efficaci. Tra le strategie più importanti ci sono la riduzione dell’uso di pesticidi e fertilizzanti chimici, la gestione corretta dei rifiuti attraverso il riciclo, la bonifica dei terreni contaminati e la promozione di materiali biodegradabili. Inoltre, leggi più severe e controlli sulle attività industriali e agricole possono limitare ulteriormente la contaminazione.
+                
+                Proteggere il suolo è essenziale per garantire un futuro sostenibile, salvaguardando la salute umana e gli ecosistemi. L’adozione di pratiche ecologiche e la sensibilizzazione sull’importanza di un suolo sano sono passi fondamentali per ridurre l’inquinamento e preservare l’ambiente per le generazioni future. </p>
+        </div>
+    </section>
+
+    <section class="agenda-section" id="agenda">
+        <h3>Agenda 2030 per lo Sviluppo Sostenibile</h3>
+        <p>L'Agenda 2030 è un piano d'azione globale per promuovere la sostenibilità e migliorare la qualità della vita delle persone in tutto il mondo. Includendo 17 obiettivi globali, mira a risolvere le sfide sociali, economiche e ambientali.</p>
+        <a href="https://www.un.org/sustainabledevelopment/it/" target="_blank" class="agenda-button">Scopri di più sull'Agenda 2030</a>
+        <footer>
+            <p>By P4ciuf & Charun02 (Angelo Paciello & Rocco Gallo)</p>
+        </footer>
+</body>
+</html>
